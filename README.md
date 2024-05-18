@@ -1,0 +1,1 @@
+git@github.com:Jilze/slozhno-sosredotochitsya.git
