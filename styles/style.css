@@ -21,7 +21,37 @@
 	gap: 4px;
 	align-items: end;
 	padding: 10px;
-	min-block-size: 100vh;
+	min-block-size: 375px;
+}
+
+.header__rec {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	text-transform: uppercase;
+	visibility: var(--rec-visibility, visible);
+	color: var(--accent-color, #FF0070);
+	inset-block-start: 10px;
+	inset-inline-end: 20px;
+}
+
+.header__rec:before {
+	content: 'rec';
+}
+
+.header__rec:after {
+	content: '';
+	display: inline-block;
+	background-color: var(--accent-color, #FF0070);
+	box-shadow: 0 0 4px 2px var(--accent-color, #FF0070);
+	border-radius: 50%;
+	margin-inline-start: 10px;
+	inline-size: 9px;
+	block-size: 9px;
+}
+
+.theme_auto .header__rec {
+	visibility: hidden;
 }
 
 .decorated-zone:before,
@@ -67,7 +97,7 @@
 }
 
 .header__theme-menu-button:hover {
-	outline: 1px solid var(--accent-color, #FF0070);
+	outline: 1px solid var(--accent-color-hover, #FF007066);
 }
 
 .header__theme-menu-button:focus {
@@ -99,13 +129,14 @@
 
 .main {
 	display: grid;
-	gap: 36px;
+	gap: 34px;
 	padding: 97px 10px;
+	padding-block-end: 56px;
 }
 
 .main__article_list {
 	display: grid;
-	gap: 27px;
+	gap: 20px;
 	color: var(--text-color, #f1b2ce);
 	margin-block-end: 17px;
 }
@@ -123,7 +154,7 @@
 .title {
 	color: var(--page-title-color, #FF0070);
 	font-family: inherit;
-	font-weight: 700;
+	font-weight: 400;
 	font-size: inherit;
 	line-height: inherit;
 }
@@ -140,7 +171,7 @@
 }
 
 .link:hover {
-	border-bottom: 1px solid var(--accent-color, #FF0070);
+	border-bottom: 1px solid var(--accent-color-focus, #f1b2ce);
 }
 
 .link:focus {
@@ -148,11 +179,16 @@
 }
 
 .link:focus-visible {
-	outline: 1px solid var(--accent-color, #FF0070);
+	outline: 1px solid var(--accent-color-focus, #f1b2ce);
+}
+
+.section__main_gallery {
+	margin-block-start: 2px;
 }
 
 .gallery__list {
 	display: grid;
+	gap: 4px;
 }
 
 .gallery__list_item-img {
@@ -168,13 +204,29 @@
 	display: grid;
 	justify-content: center;
 	align-items: center;
-	min-block-size: 100vh;
+	min-block-size: 668px;
 }
 
 @media (width >= 768px) {
 	.header {
-		gap: 95px;
+		min-block-size: 1024px;
+		gap: 93px;
 		padding: 0;
+	}
+	
+	.header__rec {
+		margin-block-start: 17px;
+		margin-inline-end: 9px;
+	}
+	
+	.decorated-zone:before {
+		inset-inline-end: 20px;
+		inset-block-start: 26px;
+	}
+	
+	.decorated-zone:after {
+		inset-inline-start: 20px;
+		inset-block-end: 14px;
 	}
 	
 	.header__rec {
@@ -185,6 +237,10 @@
 	.header__theme-menu {
 		padding: 20px;
 		margin-block-start: 177px;
+	}
+	
+	.header__theme-menu-list {
+		gap: 14px;
 	}
 	
 	.page__title_header {
@@ -202,7 +258,9 @@
 	}
 	
 	.main {
-		padding: 245px 20px;
+		padding: 66px 20px;
+		padding-block-end: 58px;
+		gap: 36px;
 	}
 	
 	.section__main_why {
@@ -214,7 +272,15 @@
 	}
 	
 	.section__main_how {
-		margin-block-end: 29px;
+		margin-block-end: 23px;
+	}
+	
+	.main__article-list_how {
+		gap: 21px;
+	}
+	
+	.main__article_list-item {
+		gap: 9px;
 	}
 	
 	.section:nth-child(-n+3) {
@@ -230,7 +296,11 @@
 	}
 	
 	.main__article_list {
-		gap: 24px;
+		gap: 20px;
+	}
+	
+	.main__article_list.main__article-list_how {
+		gap: 22px;
 	}
 	
 	.main__article_list-what {
@@ -240,6 +310,7 @@
 	.gallery__list {
 		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
+		margin-block-start: 5px;
 	}
 	
 	.gallery__list_item:first-child,
@@ -251,19 +322,38 @@
 	.gallery__list_item:nth-child(3) {
 		grid-row-start: span 2;
 	}
+	
+	.footer {
+		min-block-size: 1024px;
+	}
 }
 
 @media (width >= 1024px) {
 	
 	.header {
+		min-block-size: 768px;
 		gap: 42px;
 		padding: 0;
+	}
+	
+	.decorated-zone:before {
+		inset-inline-end: 20px;
+		inset-block-start: 20px;
+	}
+	
+	.decorated-zone:after {
+		inset-inline-start: 20px;
+		inset-block-end: 20px;
+	}
+	
+	.header__rec {
+		margin-block-start: 12px;
+		margin-inline-end: 9px;
 	}
 	
 	.header__theme-menu {
 		display: flex;
 		align-self: center;
-		margin-inline-start: 20px;
 		margin-block-start: 0;
 		margin-block-end: 215px;
 	}
@@ -284,7 +374,11 @@
 	}
 	
 	.main {
-		padding: 195px 20px;
+		padding: 60px 20px;
+	}
+	
+	.main__article_list {
+		gap: 20px;
 	}
 	
 	.section__main_why {
@@ -292,11 +386,15 @@
 		margin-block-end: 30px;
 	}
 	
-	.section__main_what {
-		margin-block-end: 12px;
+	.main__how_title-subtitle, .main__article-list_how {
+		margin-inline-start: 12px;
 	}
 	
 	.main__article_list-what {
 		grid-template-columns: repeat(3, 1fr);
+	}
+	
+	.footer {
+		min-block-size: 768px;
 	}
 }

@@ -11,8 +11,9 @@
 		<link rel="stylesheet" href="./styles/light.css">
 		<link rel="stylesheet" href="./styles/globals.css">
 		<link rel="stylesheet" href="./fonts/fonts.css">
-		<link href="./images/favicon.ico" rel="icon" sizes="any"/>
-		<link type="image/svg+xml" href="./images/favicon.svg" rel="icon"/>
+		<link href="./images/favicon.ico" rel="icon" sizes="any" />
+		<link type="image/svg+xml" href="./images/favicon.svg" rel="icon" />
+		<link href="./images/mobile-icon.png" rel="apple-touch-icon" />
 		<title>Сложно сосредоточиться</title>
 	</head>
 	<body class="page">
@@ -22,6 +23,7 @@
 				<ul class="header__theme-menu-list">
 					<li class="header__theme-menu-item">
 						<button
+										type="button"
 										class="header__theme-menu-button header__theme-menu-button_type_light"
 						>
 							День
@@ -29,6 +31,7 @@
 					</li>
 					<li class="header__theme-menu-item">
 						<button
+										type="button"
 										class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
 										disabled
 						>
@@ -37,6 +40,7 @@
 					</li>
 					<li class="header__theme-menu-item">
 						<button
+										type="button"
 										class="header__theme-menu-button header__theme-menu-button_type_dark"
 						>
 							Неон
@@ -53,7 +57,7 @@
 		<main class="main">
 			<section class="section section__main_why">
 				<h2 class="title">Почему сосредоточиться так сложно</h2>
-				<ul class="main__article_list">
+				<ul class="main__article_list .main__article_list-why">
 					<li>
 						<article class="main__article_list-item">
 							<h3 class="title title__decor">Многозадачность</h3>
@@ -139,7 +143,7 @@
 			<section class="section section__main_how">
 				<h2 class="title main__how_title"> Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
 					секунд)</h2>
-				<h3 class="title title__decor"> 5 простых (на самом деле не очень) советов</h3>
+				<h3 class="title title__decor main__how_title-subtitle"> 5 простых (на самом деле не очень) советов</h3>
 				<ul class="main__article_list main__article-list_how">
 					<li>
 						<article class="main__article_list-item">
@@ -171,7 +175,7 @@
 					</li>
 					<li>
 						<article class="main__article_list-item">
-							<h3 class="title title__decor">Прогуляйтесь</h3>
+							<h4 class="title title__decor">Прогуляйтесь</h4>
 							<p>
 								Или даже пробегитесь. Лучше найти парк или лес: один
 								эксперимент
@@ -190,7 +194,7 @@
 					</li>
 					<li>
 						<article class="main__article_list-item">
-							<h3 class="title title__decor">Хорошо ешьте</h3>
+							<h4 class="title title__decor">Хорошо ешьте</h4>
 							<p>
 								Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
 								которые препятствуют резким скачкам сахара в крови. Например,
@@ -202,7 +206,7 @@
 					</li>
 					<li>
 						<article class="main__article_list-item">
-							<h3 class="title title__decor">Читайте</h3>
+							<h4 class="title title__decor">Читайте</h4>
 							<p>Настоящие бумажные книги. Это правда помогает с концентрацией: чтобы прочитать пост в соцсети,
 								достаточно нескольких минут или даже секунд. А вот интересная книга способна затянуть и на несколько
 								часов и круто тренирует направленное внимание.</p>
