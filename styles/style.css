@@ -125,6 +125,7 @@
 .header__subtitle {
 	margin-block-start: 55px;
 	max-inline-size: 364px;
+	font-weight: 700;
 }
 
 .main {
