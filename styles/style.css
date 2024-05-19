@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-	background-image: var(--background-image, url("../images/cover-image-dark.png"));
+	background-image: var(--background-image, url("../images/cover-image.png"));
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -90,7 +90,7 @@
 .header__theme-menu-button {
 	border: none;
 	padding: 0 13px;
-	color: var(--accent-color, #FF0070);
+	color: var(--accent-color-button, #FF0070);
 	text-transform: lowercase;
 	background-color: transparent;
 	cursor: pointer;
@@ -105,11 +105,11 @@
 }
 
 .header__theme-menu-button:focus-visible {
-	border-block-end: 1px solid var(--accent-color, #FF0070);
+	border-block-end: 1px solid var(--accent-color-button, #FF0070);
 }
 
 .header__theme-menu-button_active {
-	outline: 1px solid var(--accent-color, #FF0070);
+	outline: 1px solid var(--accent-color-button, #FF0070);
 	pointer-events: none;
 }
 
@@ -181,13 +181,14 @@
 	outline: 1px solid var(--accent-color-focus, #f1b2ce);
 }
 
-.gallery__list {
-	display: grid;
-	gap: 4px;
+.section.section__main_gallery {
+	gap: 0;
 }
 
-.section__main_gallery {
-	padding-block-end: 12px;
+.gallery__list {
+	margin-block-start: 8px;
+	display: grid;
+	gap: 10px;
 }
 
 .gallery__list_item-img {
@@ -299,6 +300,10 @@
 	
 	.main__article_list-what {
 		grid-column-start: span 3;
+	}
+	
+	.section.section__main_gallery {
+		gap: 20px;
 	}
 	
 	.gallery__list {
